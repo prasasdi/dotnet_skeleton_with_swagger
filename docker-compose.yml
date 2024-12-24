@@ -1,0 +1,34 @@
+version: '3.8' 
+
+services: 
+  postgres:
+    image: postgres:latest
+    container_name: ad1ee_dotnetskeleton_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5440:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  dotnetskeleton: 
+    container_name: ad1ee_dotnetskeleton_runtime
+    depends_on:
+      - postgres
+    image: ad1eedotnet/skeleton:runtime 
+    build: 
+      context: .
+    ports: 
+      - "8080:5000" 
+      - "8081:5001"
+    environment: 
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=${ASPNETCORE_Kestrel_Certificates_Default_Password}
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=${ASPNETCORE_Kestrel_Certificates_Default_Path}
+      - SECRET=${SEKRITDOKUMINTS}
+    volumes:  
+      - ${USERPROFILE}/.aspnet/https:/https/  
+
+volumes:
+  postgres_data:

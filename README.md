@@ -1,7 +1,18 @@
-# Skeleton with Swagger
+# Dotnet Skeleton
+Aplikasi dotnet yang sudah dengan SSL dan Docker juga Swagger untuk dokumentasi API
 
 # Now with Docker!
-Masih ditahap awal, bangun image dengan
-`docker build --no-cache -t ad1eedotnet/skeleton:build .`
-dan kemudian jalankan dengan
-`docker run --rm -it -p 8080:5000 ad1eedotnet/skeleton:build`
+1. Buat image dulu dengan `docker build -t ad1eedotnet/skeleton:runtime .`
+2. Buat sertifikat untuk SSL terlebih dulu untuk menjalankan aplikasi
+3. Lakukan `docker-compose up -d`
+
+### .env
+```
+ASPNETCORE_Kestrel_Certificates_Default_Password=
+ASPNETCORE_Kestrel_Certificates_Default_Path=
+SEKRITDOKUMINTS=
+
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+```
