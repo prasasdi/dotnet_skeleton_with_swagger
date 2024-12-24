@@ -9,7 +9,7 @@ LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
 // Add services to the container.
 
 builder.Services.AddControllers()
-.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+.AddApplicationPart(typeof(MainAplikasi.Presentation.AssemblyReference).Assembly);
 
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();

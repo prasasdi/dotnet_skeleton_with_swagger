@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainAplikasi", "MainAplikasi\MainAplikasi.csproj", "{55A57841-CABB-4188-9072-96E5D09B9995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainAplikasi", "MainAplikasi\MainAplikasi.csproj", "{55A57841-CABB-4188-9072-96E5D09B9995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{99D9FFE7-8294-453D-BE98-98F9D14501B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{99D9FFE7-8294-453D-BE98-98F9D14501B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{53015921-C519-4D5E-9146-330A10D0D40B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{53015921-C519-4D5E-9146-330A10D0D40B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService.cs\LoggerService.csproj", "{8AE71240-5B1F-4FD4-A0DD-3C7AB2BA5528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService.cs\LoggerService.csproj", "{8AE71240-5B1F-4FD4-A0DD-3C7AB2BA5528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{2B7B90AE-43BC-4B2A-8C7B-54B9F2C47381}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainAplikasi.Presentation", "Presentation\MainAplikasi.Presentation.csproj", "{2B7B90AE-43BC-4B2A-8C7B-54B9F2C47381}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
