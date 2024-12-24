@@ -14,6 +14,7 @@ builder.Services.AddControllers()
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureSwagger();
 
 var app = builder.Build();
 
@@ -27,6 +28,12 @@ app.UseStaticFiles();
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.All
+});
+app.UseSwagger();
+app.UseSwaggerUI(s =>
+{
+    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Ad1ee Skeleton v1");
+    s.SwaggerEndpoint("/swagger/v2/swagger.json", "Ad1ee Skeleton v2");
 });
 
 app.UseCors("CorsPolicy");
