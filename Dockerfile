@@ -4,5 +4,5 @@ COPY . .
 RUN dotnet restore 
 RUN dotnet publish ./MainAplikasi/MainAplikasi.csproj -o /publish/ 
 WORKDIR /publish 
-ENV ASPNETCORE_URLS=http://+:4062 
+ENV ASPNETCORE_URLS=http://+:5000
 ENTRYPOINT ["dotnet", "MainAplikasi.dll"] 
