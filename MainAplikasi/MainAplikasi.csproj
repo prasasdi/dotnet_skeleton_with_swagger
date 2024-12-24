@@ -14,7 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-    <ProjectReference Include="..\LoggerService.cs\LoggerService.csproj" />
+    <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
     <ProjectReference Include="..\Presentation\MainAplikasi.Presentation.csproj" />
   </ItemGroup>
 
