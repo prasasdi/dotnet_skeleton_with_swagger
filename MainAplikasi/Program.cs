@@ -22,7 +22,14 @@ var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILoggerManager>();
 app.ConfigureExceptionHandler(logger);
 if (app.Environment.IsProduction())
+{
+    app.UseExceptionHandler("/error");
     app.UseHsts();
+}
+else
+{
+    app.UseExceptionHandler("/error");
+}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
