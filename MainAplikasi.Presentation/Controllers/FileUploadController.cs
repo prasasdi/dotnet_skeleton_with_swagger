@@ -27,27 +27,5 @@ namespace MainAplikasi.Presentation.Controllers
         {
             return Ok();
         }
-
-        [HttpGet]
-        [Route("index")]
-        public IActionResult GetPage()
-        {
-            throw new Exception("Begini");
-
-            string htmlContent = "<html><body><h1>Welcome to the file upload page</h1></body></html>";
-            return Content(htmlContent, "text/html");
-        }
-    }
-
-    [Route("error")]
-    [ApiController]
-    public class ErrorHandlerController : ControllerBase
-    {
-        [HttpGet]
-        public IActionResult GetPage()
-        {
-            string htmlContent = "<html><body><h1>Yakin lu?</h1></body></html>";
-            return Content(htmlContent, "text/html");
-        }
     }
 }
